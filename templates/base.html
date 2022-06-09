@@ -1,0 +1,20 @@
+{% load bootstrap5 %}{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %}
+    <title>Combinados.net</title>
+    {% endblock title %} {% bootstrap_css %}
+  </head>
+  <body>
+    <!--Begin Header-->
+    {% block header %} {% include 'header.html' %} {% endblock header %}
+    <!--End Header-->
+    {% block content %}
+    <h1>Base</h1>
+    {% endblock content %} {% bootstrap_javascript %}
+  </body>
+</html>
