@@ -44,7 +44,7 @@ OTHER_APPS = [
 ]
 
 MY_APPS = [
-    'core.apps.CoreConfig'
+    'core'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + OTHER_APPS + MY_APPS
