@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import HomeView, home
+from .views import HomeView
 
 '''
 from django.http import HttpResponse
@@ -12,5 +12,4 @@ urlpatterns = [
     #(caminho, view.py )
     #path('sobre/', my_view),
     path('', HomeView.as_view(), name = 'home'),
-    path('home/', home, name="home-2"),
 ]
