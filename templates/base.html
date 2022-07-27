@@ -1,4 +1,4 @@
-{% load bootstrap5 %}{% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -7,23 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block title %}
     <title>Document</title>
-    {% endblock title %} {% bootstrap_css %}
+    {% endblock title %}
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
   </head>
   <body>
     {% block header %}
-    <div class="header">
-      <h1>Header</h1>
-    </div>
-    {% endblock header %} {% block content %}
-    <div class="content">
-      <h1>Olá mundo</h1>
-    </div>
-    {% endblock content %} {% block footer %}
-    <div class="footer">
-      <h1>Rodapé</h1>
-    </div>
-    {% endblock footer %} {% bootstrap_javascript %}
+    <!--Header-->
+    {% include 'base/components/header.html' %} {% endblock header %}
+    <!--End Header-->
+    {% block content %}
+    <!--Content-->
+    <p>Conteúdo do site</p>
+    {% endblock content %}
+    <!--End Content-->
+    {% block footer %} ]
+    <h1>Aqui é o rodapé</h1>
+    {% endblock footer %}
     <script src="{% static 'scripts.js' %}"></script>
   </body>
 </html>
