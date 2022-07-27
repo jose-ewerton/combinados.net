@@ -1,3 +1,7 @@
 h1 {
-  color: red;
+  color: rgb(196, 74, 74);
+}
+
+.header {
+  background-color: rgb(157, 135, 177);
 }
