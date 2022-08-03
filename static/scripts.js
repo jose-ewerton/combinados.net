@@ -1,2 +1,2 @@
-window.alert("Olá Mundo!");
+//window.alert("Olá Mundo!");
 console.log("Olá mundo no terminal...");
