@@ -3,14 +3,15 @@
 {% block title %}
 <title>Combinandos.net</title>
 {% endblock title %} {% block header %}
-<!--Header Combinados.net -->
+<!--Header -->
 {% include 'core/components/header.html' %}
-<!--End Header Conbinados.net -->
-{% endblock header %}
-
-
-{% block content %}
-<div class="container mydiv">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda totam harum numquam nihil, qui eligendi voluptatum explicabo veritatis magni fuga iusto saepe alias ad expedita dignissimos rerum odio? Qui, labore?</p>
-</div>
-{% endblock content %}
+<!--End Header -->
+{% endblock header %} {% block content %}
+<!--Heroe Combinados.net-->
+{% include 'core/components/main.html' %}
+<!--End Heroe -->
+{% endblock content%} {% block footer %}
+<!--Footer-->
+{% include 'core/components/footer.html' %}
+<!--End Footer-->
+{% endblock footer %}

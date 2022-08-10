@@ -21,15 +21,16 @@
   <body>
     {% block header %}
     <!--Header-->
-    {% include 'base/components/header.html' %} {% endblock header %}
+    {% include 'base/components/header.html' %}
     <!--End Header-->
-    {% block content %}
+    {% endblock header %} {% block content %}
     <!--Content-->
     <p>Conteúdo do site</p>
-    {% endblock content %}
     <!--End Content-->
-    {% block footer %} ]
+    {% endblock content %} {% block footer %} ]
+    <!--Footer-->
     <h1>Aqui é o rodapé</h1>
+    <!--End Footer-->
     {% endblock footer %} {% bootstrap_javascript %}
     <script src="{% static 'scripts.js' %}"></script>
   </body>

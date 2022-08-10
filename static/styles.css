@@ -1,7 +1,7 @@
 /* Configurações de cores e fontes gerais do app Web */
 :root {
-  --color-primary: #c9e9dd;
-  --color-secundary: #012340;
+  --color-primary: #d6ebe3;
+  --color-secundary: #1f033f;
   --color-emphasis: #04d939;
 
   --color-white: #fff;
@@ -37,11 +37,10 @@ body {
   font-family: var(--font-primary);
 }
 
-
 /*      */
 
 .navbar {
-  background: var(--color-secundary)
+  background: var(--color-secundary);
 }
 
 .navbar-brand {
@@ -50,18 +49,29 @@ body {
 
 i {
   font-size: 2rem;
-}
-
-i,
-span {
   color: var(--color-primary);
 }
 
-i:hover,
-span:hover {
+i:hover {
   color: var(--color-emphasis);
 }
 
-.mydiv{
+.div-main {
+  position: relative;
   background-color: var(--color-primary);
+  min-height: 100vh;
+}
+
+h1 {
+  color: var(--color-secundary);
+}
+
+.button-heroe {
+  background-color: var(--color-secundary);
+  color: var(--color-emphasis);
+}
+
+.button-heroe:hover {
+  color: var(--color-primary);
+  background-color: var(--color-emphasis);
 }
