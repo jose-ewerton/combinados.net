@@ -64,9 +64,11 @@ i:hover {
 
 h1 {
   color: var(--color-secundary);
+  font-family: var(--font-headings);
 }
 
 .button-heroe {
+  font: var(--font-primary);
   background-color: var(--color-secundary);
   color: var(--color-emphasis);
 }
