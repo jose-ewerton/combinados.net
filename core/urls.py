@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import HomeView
+from .views import HomeView, EventCreate
 
 '''
 from django.http import HttpResponse
@@ -12,4 +12,5 @@ urlpatterns = [
     #(caminho, view.py )
     #path('sobre/', my_view),
     path('', HomeView.as_view(), name = 'home'),
+    path('criar-evento/', EventCreate.as_view(), name = 'criar-evento'),
 ]

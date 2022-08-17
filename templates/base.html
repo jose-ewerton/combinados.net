@@ -20,22 +20,22 @@
       rel="stylesheet"
     />
     {% block title %}
-    <title>Document</title>
+    <title>Combinandos.net</title>
     {% endblock title %} {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'styles.css' %}" />
   </head>
   <body>
     {% block header %}
     <!--Header-->
-    {% include 'base/components/header.html' %}
+    {% include 'core/components/header.html' %}
     <!--End Header-->
     {% endblock header %} {% block content %}
     <!--Content-->
     <p>Conteúdo do site</p>
     <!--End Content-->
-    {% endblock content %} {% block footer %} ]
+    {% endblock content %} {% block footer %}
     <!--Footer-->
-    <h1>Aqui é o rodapé</h1>
+    {% include 'core/components/footer.html' %}
     <!--End Footer-->
     {% endblock footer %} {% bootstrap_javascript %}
     <script src="{% static 'scripts.js' %}"></script>

@@ -4,15 +4,19 @@
     <div class="col-lg-6 mx-auto">
       <h1 class="display-5 fw-bold">Crie já seu combinado</h1>
       <p class="fs-5 mb-4">Rápido, fácil e prático.</p>
+      <!--
       <div class="container">
         <img class="img-fluid" src="{% static 'img/teste.png' %}" alt="" />
       </div>
-      <button
-        type="button"
-        class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold button-heroe"
-      >
-        Começar Agora
-      </button>
+      -->
+      <a href="{% url 'criar-evento' %}">
+        <button
+          type="button"
+          class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold button-heroe"
+        >
+          Começar Agora
+        </button>
+      </a>
     </div>
   </div>
 </section>
