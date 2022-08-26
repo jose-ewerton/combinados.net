@@ -1,0 +1,7 @@
+<form method="post">
+  {% csrf_token %}
+
+  <p>Confirme para excluir o evento "{{ object }}"?</p>
+
+  <input type="submit" value="Confirm" />
+</form>

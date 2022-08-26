@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import HomeView, EventCreate
+from .views import EventUpdate, HomeView, EventCreate, EventDelete
 
 '''
 from django.http import HttpResponse
@@ -13,4 +13,6 @@ urlpatterns = [
     #path('sobre/', my_view),
     path('', HomeView.as_view(), name = 'home'),
     path('criar-evento/', EventCreate.as_view(), name = 'criar-evento'),
+    path('atualizar-evento/<int:pk>/', EventUpdate.as_view(), name= 'atualizar-evento'),
+    path('<int:pk>/delete/', EventDelete.as_view(), name= 'deletar-evento' ),
 ]
