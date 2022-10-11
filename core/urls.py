@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import EventUpdate, HomeView, EventCreate, EventDelete
+from .views import EventUpdate, HomeView, EventCreate, EventDelete, register
 
 '''
 from django.http import HttpResponse
@@ -15,4 +15,11 @@ urlpatterns = [
     path('criar-evento/', EventCreate.as_view(), name = 'criar-evento'),
     path('atualizar-evento/<int:pk>/', EventUpdate.as_view(), name= 'atualizar-evento'),
     path('<int:pk>/delete/', EventDelete.as_view(), name= 'deletar-evento' ),
+    
+    #autenticação
+    path('cadastro/', register, name = 'cadastro'),
+    
 ]
+
+
+
