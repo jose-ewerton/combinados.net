@@ -18,7 +18,7 @@ urlpatterns = [
     
     #autenticação
     path('cadastro/', register, name = 'cadastro'),
-    
+    path('cadastro/', register, name = 'login'),
 ]
 
 

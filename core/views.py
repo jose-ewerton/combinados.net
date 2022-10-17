@@ -42,12 +42,13 @@ def register(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         
-        #user = User.objects.filter('username').first()
+        #user = User.objects.filter(username = username).first()
         
         #if user:
         #    return render(request, "core/pages/permisson.html")
         #else:
         user = User.objects.create_user(username=username, email=email, password=password)
+        
         
         return render(request, "core/pages/home.html")
 
