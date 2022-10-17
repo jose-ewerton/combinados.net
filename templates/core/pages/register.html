@@ -3,18 +3,45 @@
   <div class="div-main d-flex text-center align-items-center">
     <div class="col-lg-6 mx-auto">
       <h1 class="display-5 fw-bold">Cadastrar Usuário</h1>
-      <form action="" method="POST">
+
+      <form action="{% url 'cadastro' %}" method="POST">
         {% csrf_token %}
-        <form action="{% url 'cadastro' %}" method="POST">
-            <input type="text" placeholder="usuário" name="username" required>
-            <br>
-            <br>
-            <input type="email" placeholder="e-mail" name="email" required>
-            <br>
-            <br>
-            <input type="password" placeholder="senha" name="password" required>
-            <br>
-            <br>
+        <div class="mb-3">
+          <label class="form-label" for="typeText">Usuário</label>
+          <input
+            type="text"
+            id="typeText"
+            class="form-control"
+            placeholder="usuário..."
+            name="username"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Endereço de E-mail</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="e-mail..."
+            name="email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="senha..."
+            name="password"
+            required
+          />
+        </div>
         <button type="submit" class="btn btn-primary">Cadastrar</button>
       </form>
     </div>

@@ -5,6 +5,9 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from django.shortcuts import render
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as login_django
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -12,6 +15,10 @@ from django.contrib.auth.models import User
 #paginas do site
 class HomeView(TemplateView):
     template_name = 'core/pages/home.html'
+
+@login_required    
+class PersonalView(TemplateView):
+    template_name = 'core/pages/personal.html'
 
 #CRUD for event
 
@@ -42,19 +49,24 @@ def register(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
         
-        #user = User.objects.filter(username = username).first()
-        
+        #user = User.objects.filter(username = username).first()   
         #if user:
         #    return render(request, "core/pages/permisson.html")
         #else:
         user = User.objects.create_user(username=username, email=email, password=password)
-        
-        
+        user.save()
         return render(request, "core/pages/home.html")
 
 def login(request):
     if request.method == 'GET':
         return render(request, "core/pages/login.html")
-
-
-
+    else:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        user = authenticate(username=username, password=password)
+        
+        if user:
+            login_django(request, user)
+        else:
+           return render(request, "core/pages/register.html") 
