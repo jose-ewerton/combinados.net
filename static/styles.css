@@ -48,7 +48,7 @@ body {
 }
 
 i {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--color-primary);
 }
 
@@ -76,4 +76,15 @@ h1 {
 .button-heroe:hover {
   color: var(--color-primary);
   background-color: var(--color-emphasis);
+}
+
+#ul-header li a {
+  color: var(--color-primary);
+  margin: 15px 15px;
+  font-family: var(--font-headings);
+  font-size: 1.7rem;
+}
+
+#ul-header li a:hover {
+  color: var(--color-emphasis);
 }

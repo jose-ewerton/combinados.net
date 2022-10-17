@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import EventUpdate, HomeView, EventCreate, EventDelete, register
+from .views import EventUpdate, HomeView, EventCreate, EventDelete, register, login
 
 '''
 from django.http import HttpResponse
@@ -18,7 +18,7 @@ urlpatterns = [
     
     #autenticação
     path('cadastro/', register, name = 'cadastro'),
-    path('cadastro/', register, name = 'login'),
+    path('login/', login, name = 'login'),
 ]
 
 

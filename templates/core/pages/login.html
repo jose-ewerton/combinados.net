@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section id="register-user">
+  <div class="div-main d-flex text-center align-items-center">
+    <div class="col-lg-6 mx-auto">
+      <h1 class="display-5 fw-bold">Acessar Combinados</h1>
+      <form action="" method="POST">
+        {% csrf_token %}
+        <form action="{% url 'cadastro' %}" method="POST">
+            <input type="text" placeholder="usuário" name="username" required>
+            <br>
+            <br>
+            <input type="password" placeholder="senha" name="password" required>
+            <br>
+            <br>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock content%}

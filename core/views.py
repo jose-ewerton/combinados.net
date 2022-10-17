@@ -52,6 +52,9 @@ def register(request):
         
         return render(request, "core/pages/home.html")
 
+def login(request):
+    if request.method == 'GET':
+        return render(request, "core/pages/login.html")
 
 
 
