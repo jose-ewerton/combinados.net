@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="mEzSfYppKcivNNCRlda4" name="Página-1">
-        <mxGraphModel dx="1064" dy="1679" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F5F5F5" math="0" shadow="0">
+        <mxGraphModel dx="662" dy="1526" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F5F5F5" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -140,17 +140,17 @@
                 <mxCell id="e4h66-71FnqU7bP2j0QC-145" value="&lt;font color=&quot;#050505&quot;&gt;Usuário&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=11;fontFamily=Helvetica;fontColor=default;" parent="1" vertex="1">
                     <mxGeometry x="825" y="230" width="50" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="eDi8h3HDM6_jwTuCO-gS-138" value="fazer login" style="ellipse;whiteSpace=wrap;html=1;fontColor=#0F0F0F;fillColor=#F7F7F7;strokeColor=#000000;" vertex="1" parent="1">
+                <mxCell id="eDi8h3HDM6_jwTuCO-gS-138" value="fazer login" style="ellipse;whiteSpace=wrap;html=1;fontColor=#0F0F0F;fillColor=#F7F7F7;strokeColor=#000000;" parent="1" vertex="1">
                     <mxGeometry x="1133" y="130" width="140" height="50" as="geometry"/>
                 </mxCell>
-                <mxCell id="eDi8h3HDM6_jwTuCO-gS-139" value="inclui" style="endArrow=classic;html=1;fontColor=#141414;fillColor=#f9f7ed;strokeColor=#36393d;labelBackgroundColor=#FCFCFC;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="eDi8h3HDM6_jwTuCO-gS-138" target="102">
+                <mxCell id="eDi8h3HDM6_jwTuCO-gS-139" value="inclui" style="endArrow=classic;html=1;fontColor=#141414;fillColor=#f9f7ed;strokeColor=#36393d;labelBackgroundColor=#FCFCFC;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="eDi8h3HDM6_jwTuCO-gS-138" target="102" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="1273" y="190" as="sourcePoint"/>
                         <mxPoint x="1273" y="50" as="targetPoint"/>
                         <Array as="points"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="eDi8h3HDM6_jwTuCO-gS-140" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#050505;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="82" target="eDi8h3HDM6_jwTuCO-gS-138">
+                <mxCell id="eDi8h3HDM6_jwTuCO-gS-140" value="" style="endArrow=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#050505;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="82" target="eDi8h3HDM6_jwTuCO-gS-138" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="894" y="161.44385026737996" as="sourcePoint"/>
                         <mxPoint x="1143.0000000000045" y="-5" as="targetPoint"/>
@@ -160,7 +160,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="uMqM1Kzkvxf-klBFFvU4" name="Página-2">
-        <mxGraphModel dx="745" dy="357" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="662" dy="357" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <object label="" id="SviEt6VOkgP8NWicdoSZ-0">
                     <mxCell/>
