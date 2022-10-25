@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -10,33 +11,33 @@ class Base(models.Model):
     
     class Meta:
         abstract = True
-
-class User(Base):
-    email = models.EmailField("E-mail", max_length=100)
-    password = models.CharField("Senha", max_length=20)
-    
-    def __str__(self):
-        return self.email
        
 TYPES_EVENTS = (
     ('1', 'ATIVIDADES'),
     ('2', 'DOAÇÕES'),
 )   
-class Event(Base):
-    title = models.CharField("Título do Evento", max_length=100)
-    event_type = models.CharField("Tipo de evento", max_length=100, choices= TYPES_EVENTS)
-    description = models.TextField("Descrição")
-    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Usuário")
+class Combined(Base):
+    combination_title = models.CharField("Título do Combinado", max_length=100, null= True)
+    combination_category = models.CharField("Categoria de evento", max_length=100, choices= TYPES_EVENTS, null= True)
+    combination_description = models.TextField("Descrição do Combinado", null= True)
     
     def __str__(self):
-        return self.title
+        return self.combination_title
     
 class Task(Base):
-    description = models.TextField("Descrição da tarefa")
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    task_description = models.TextField("Descrição da tarefa", null= True)
+    combination = models.ForeignKey(Combined, on_delete=models.CASCADE, null= True)
     
     def __str__(self):
         return self.description
+
+
+#Criando um perfil e adicionando campos ao meu usuário
+  
+class Profile(Base):
+    #Campos Adicionais   
+    phone_number = models.CharField("Telefone", max_length=100, null= True) #permitir ser nulos na criação
+    user = models.OneToOneField(User, on_delete = models.CASCADE)
     
-    
+    def __str__(self):
+        return self.user.email  

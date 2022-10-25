@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from .models import User, Event, Task
+from .models import Profile, Combined, Task
 
 # Register your models here.
 
-admin.site.register(User)
-admin.site.register(Event)
+admin.site.register(Combined)
 admin.site.register(Task)
+admin.site.register(Profile)

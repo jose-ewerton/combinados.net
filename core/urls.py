@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import EventUpdate, HomeView, EventCreate, EventDelete, PersonalView, register, login
+from .views import HomeView, Home2View, CombinationCreate, CombinationUpdate, CombinationDelete, Profile, register, login
 
 '''
 from django.http import HttpResponse
@@ -12,14 +12,17 @@ urlpatterns = [
     #(caminho, view.py )
     #path('sobre/', my_view),
     path('', HomeView.as_view(), name = 'home'),
-    path('perfil/', PersonalView, name = 'perfil'),
-    path('criar-evento/', EventCreate.as_view(), name = 'criar-evento'),
-    path('atualizar-evento/<int:pk>/', EventUpdate.as_view(), name= 'atualizar-evento'),
-    path('<int:pk>/delete/', EventDelete.as_view(), name= 'deletar-evento' ),
+    path('criar-combinado/', CombinationCreate.as_view(), name = 'criar-combinado'),
+    path('atualizar-combinado/<int:pk>/', CombinationUpdate.as_view(), name= 'atualizar-combinado'),
+    path('<int:pk>/deletar-combinado/', CombinationDelete.as_view(), name= 'deletar-combinado' ),
     
     #autenticação
     path('cadastro/', register, name = 'cadastro'),
     path('login/', login, name = 'login'),
+    
+    #páginas logado
+    path('home2/', Home2View, name = 'home2'),
+    path('perfil/', Profile, name = 'perfil'),
 ]
 
 
