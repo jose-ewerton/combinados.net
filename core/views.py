@@ -10,7 +10,8 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import redirect
 
-from .models import Profile, Combined
+from .models import Profile as profile
+from .models import Combined
 
 # Create your views here.
 
@@ -58,7 +59,7 @@ def register(request):
         
         user = User.objects.create_user(username=username, email=email, password=password)
         user.save()
-        Profile.objects.create(user = user)  #cria o perfil do usuário após o cadastro
+        profile.objects.create(user= user)  #cria o perfil do usuário após o cadastro
         return render(request, "core/pages/home.html")
 
 def login(request):
