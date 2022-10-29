@@ -11,6 +11,7 @@ from django.urls import reverse
 from django.shortcuts import redirect
 
 from .models import Combined
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Create your views here.
 
@@ -22,10 +23,11 @@ class HomeView(TemplateView):
 
 #CRUD for event
 
-class CombinationCreate(CreateView):
+class CombinationCreate(LoginRequiredMixin, CreateView):
     model = Combined
     fields = ['combination_title', 'combination_category', 'combination_description']
     template_name = 'core/pages/forms.html'
+    login_url = 'login'
     success_url = reverse_lazy('home')
     
 class CombinationUpdate(UpdateView):
