@@ -1,28 +1,22 @@
 from django.urls import path
-from .views import HomeView, Home2View, CombinationCreate, CombinationUpdate, CombinationDelete, Profile, register, login
-
-'''
-from django.http import HttpResponse
-
-def my_view(request):
-    return HttpResponse(" Alguma coisa")
-'''
+from . import views
 
 urlpatterns = [
-    #(caminho, view.py )
-    #path('sobre/', my_view),
-    path('', HomeView.as_view(), name = 'home'),
-    path('criar-combinado/', CombinationCreate.as_view(), name = 'criar-combinado'),
-    path('atualizar-combinado/<int:pk>/', CombinationUpdate.as_view(), name= 'atualizar-combinado'),
-    path('<int:pk>/deletar-combinado/', CombinationDelete.as_view(), name= 'deletar-combinado' ),
     
     #autenticação
-    path('cadastro/', register, name = 'cadastro'),
-    path('login/', login, name = 'login'),
+    path('cadastro/', views.register, name = 'cadastro'),
+    path('login/', views.login, name = 'login'),
+    path('', views.HomeView.as_view(), name = 'home'),
+    
+    #CRUD para criar combinados
+    path('criar-combinado/', views.CombinationCreate.as_view(), name = 'criar-combinado'),
+    path('atualizar-combinado/<int:pk>/', views.CombinationUpdate.as_view(), name= 'atualizar-combinado'),
+    path('listar-combinados/', views.CombinationList.as_view(), name = 'listar-combinados'),
+    path('<int:pk>/deletar-combinado/', views.CombinationDelete.as_view(), name= 'deletar-combinado' ),
     
     #páginas logado
-    path('home2/', Home2View, name = 'home2'),
-    path('perfil/', Profile, name = 'perfil'),
+    path('home2/', views.Home2View, name = 'home2'),
+    #path('perfil/', Profile, name = 'perfil'),
 ]
 
 

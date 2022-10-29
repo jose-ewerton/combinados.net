@@ -10,7 +10,6 @@ from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.shortcuts import redirect
 
-from .models import Profile as profile
 from .models import Combined
 
 # Create your views here.
@@ -30,6 +29,12 @@ class CombinationCreate(CreateView):
     success_url = reverse_lazy('home')
     
 class CombinationUpdate(UpdateView):
+    model = Combined
+    fields = ['combination_title', 'combination_category', 'combination_description']
+    template_name = 'core/pages/forms.html'
+    success_url = reverse_lazy('home')
+
+class CombinationList(UpdateView):
     model = Combined
     fields = ['combination_title', 'combination_category', 'combination_description']
     template_name = 'core/pages/forms.html'
@@ -59,7 +64,6 @@ def register(request):
         
         user = User.objects.create_user(username=username, email=email, password=password)
         user.save()
-        profile.objects.create(user= user)  #cria o perfil do usuário após o cadastro
         return render(request, "core/pages/home.html")
 
 def login(request):
@@ -85,7 +89,7 @@ def login(request):
 class Home2View(TemplateView):
     template_name = 'core/pages/home2.html'
 
-@login_required 
-class Profile(TemplateView):
-    template_name = 'core/pages/profile.html'  
+#@login_required 
+#class Profile(TemplateView):
+#    template_name = 'core/pages/profile.html'  
 

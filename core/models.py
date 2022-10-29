@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -33,11 +33,14 @@ class Task(Base):
 
 
 #Criando um perfil e adicionando campos ao meu usuário
-  
+
+''' 
 class Profile(Base):
     #Campos Adicionais   
-    phone_number = models.CharField("Telefone", max_length=100, null= True) #permitir ser nulos na criação
+    username = models.CharField("username", max_length=100, null= True) #permitir ser nulos na criação
     user = models.OneToOneField(User, on_delete = models.CASCADE)
     
     def __str__(self):
         return self.user.email  
+        
+'''
