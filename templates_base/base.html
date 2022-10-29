@@ -22,22 +22,15 @@
     {% block title %}
     <title>Combinandos.net</title>
     {% endblock title %} {% bootstrap_css %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}" />
   </head>
   <body>
     {% block header %}
-    <!--Header-->
-    {% include 'core/components/header.html' %}
-    <!--End Header-->
     {% endblock header %} {% block content %}
-    <!--Content-->
     <p>Conteúdo do site</p>
-    <!--End Content-->
-    {% endblock content %} {% block footer %}
-    <!--Footer-->
-    {% include 'core/components/footer.html' %}
-    <!--End Footer-->
+    {% endblock content %} 
+    {% block footer %}
     {% endblock footer %} {% bootstrap_javascript %}
-    <script src="{% static 'scripts.js' %}"></script>
+    <script src="{% static 'core/js/scripts.js' %}"></script>
   </body>
 </html>

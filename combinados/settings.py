@@ -64,7 +64,10 @@ ROOT_URLCONF = 'combinados.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['templates'],
+        'DIRS': [
+                'templates_base',
+                'templates',
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,8 +136,8 @@ STATICFILES_DIRS = [
     #'/var/www/static/',
 ]
 
-MEDIA_URL = '/img/'
-MEDIA_ROOT = BASE_DIR/'static/img/'
+#MEDIA_URL = '/img/'
+#MEDIA_ROOT = BASE_DIR/'static/img/'
 
 
 
