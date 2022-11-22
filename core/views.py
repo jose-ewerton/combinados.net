@@ -79,7 +79,8 @@ def login(request):
         
         if user is not None:
             login_django(request, user)
-            return redirect('home2')         
+            #return render(request, "core/pages/home2.html") 
+            return HttpResponseRedirect(reverse('home2'))        
         else:
             return HttpResponseRedirect(reverse('cadastro')) 
 
@@ -87,9 +88,12 @@ def login(request):
 
 #página principal logado no site  
 
-@login_required  
-class Home2View(TemplateView):
+#@login_required(login_url='core/pages/login.html')  #redirecione para página de login
+class Home2View(LoginRequiredMixin, TemplateView):
     template_name = 'core/pages/home2.html'
+    login_url = 'core/pages/login.html'
+    redirect_field_name = 'home2'
+    
 
 #@login_required 
 #class Profile(TemplateView):

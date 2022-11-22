@@ -15,7 +15,7 @@ urlpatterns = [
     path('<int:pk>/deletar-combinado/', views.CombinationDelete.as_view(), name= 'deletar-combinado' ),
     
     #páginas logado
-    path('home2/', views.Home2View, name = 'home2'),
+    path('home2/', views.Home2View.as_view(), name = 'home2'),
     #path('perfil/', Profile, name = 'perfil'),
 ]
 
